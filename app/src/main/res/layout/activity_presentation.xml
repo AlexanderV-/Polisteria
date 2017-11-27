@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context="juniorvalerav.polisteriaapp.presentationActivity"
     android:background="@drawable/backgroundimage"
-    android:theme="@style/AppTheme.NoActionBar">
+    android:theme="@style/AppTheme.NoActionBar"
+    >
 
     <Button
         android:id="@+id/signInButton"

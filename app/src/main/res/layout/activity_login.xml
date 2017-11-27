@@ -4,46 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="juniorvalerav.polisteriaapp.loginActivity"
     android:background="@drawable/signin_backgroundimage"
-    android:theme="@style/AppTheme.NoActionBar">
+    android:theme="@style/AppTheme.NoActionBar"
+    tools:context="juniorvalerav.polisteriaapp.loginActivity">
 
 
     <EditText
         android:id="@+id/emailEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="37dp"
+        android:layout_width="247dp"
+        android:layout_height="46dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="52dp"
-        android:background="#80ffffff"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@android:color/background_light"
         android:ems="10"
         android:hint="@string/pedir_email"
         android:inputType="textEmailAddress"
         android:selectAllOnFocus="true"
         android:singleLine="true"
-        android:textColor="@android:color/background_light"
-        android:textStyle="bold"
+        android:textColorHint="#FFF"
+        app:layout_constraintBottom_toTopOf="@+id/passwordEditText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+        app:layout_constraintTop_toBottomOf="@+id/guideline3" />
 
     <EditText
         android:id="@+id/passwordEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="36dp"
+        android:layout_width="243dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="#80ffffff"
+        android:backgroundTint="@android:color/background_light"
         android:ems="10"
         android:hint="@string/pedir_password"
         android:inputType="textPassword"
-        android:textColor="@android:color/background_light"
+        android:textColorHint="#FFF"
+        android:textColorLink="@color/colorAccent"
         android:textSize="18sp"
-        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/forgotPasswordTextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailEditText" />
 
@@ -52,27 +55,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="171dp" />
+        app:layout_constraintGuide_percent="0.41" />
 
-    <TextView
-        android:id="@+id/signUpTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/polisteriaLogoName"
+        android:layout_width="360dp"
+        android:layout_height="182dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/baloo_bhai"
-        android:shadowColor="@color/colorAccent"
-        android:text="@string/login_textView"
-        android:textAllCaps="false"
-        android:textColor="@color/colorAccent"
-        android:textSize="44sp"
-        app:layout_constraintBottom_toTopOf="@+id/emailEditText"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/polisteriaLogoName"
+        android:cropToPadding="true"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.86" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/polisteria_logoname" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline4"
@@ -84,36 +87,43 @@
     <Button
         android:id="@+id/loginButton"
         style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="205dp"
+        android:layout_width="251dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="76dp"
+        android:layout_marginBottom="60dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="#70ff5252"
+        android:background="@color/colorAccentDark"
         android:text="@string/sign_in_botton"
         android:textColor="@android:color/background_light"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordEditText"
-        app:layout_constraintVertical_bias="0.656" />
+        app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
     <TextView
         android:id="@+id/forgotPasswordTextView"
         android:layout_width="101dp"
         android:layout_height="20dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="56dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:text="@string/forgotPassword_textView"
-        android:textColor="@android:color/background_light"
+        android:textColor="#fff"
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/loginButton"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/passwordEditText"
-        app:layout_constraintTop_toBottomOf="@+id/passwordEditText"
-        app:layout_constraintVertical_bias="0.333" />
+        app:layout_constraintHorizontal_bias="0.813"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="435dp" />
 
 </android.support.constraint.ConstraintLayout>
