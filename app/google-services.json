@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "574341451682",
+    "firebase_url": "https://polisteria-9e340.firebaseio.com",
+    "project_id": "polisteria-9e340",
+    "storage_bucket": "polisteria-9e340.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:574341451682:android:1030b024ee1923bf",
+        "android_client_info": {
+          "package_name": "juniorvalerav.polisteriaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "574341451682-m0unl846ll979r5ab8tt3sk6hhfc4ogn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "juniorvalerav.polisteriaapp",
+            "certificate_hash": "a9bb02432776b8cb433a76dbf7658efd90fda5ab"
+          }
+        },
+        {
+          "client_id": "574341451682-8fet1n6p6e6vviglo25b2v1hlnlbobq4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdTvmZVefMTy0mIIhRn43gzJrrFJayENU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "574341451682-8fet1n6p6e6vviglo25b2v1hlnlbobq4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

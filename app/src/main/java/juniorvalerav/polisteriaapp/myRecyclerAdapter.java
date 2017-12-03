@@ -30,7 +30,7 @@ public class myRecyclerAdapter extends RecyclerView.Adapter<myRecyclerAdapter.Vi
     public myRecyclerAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         TextView v = (TextView) LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.problema_view, parent, false);
+                .inflate(R.layout.activity_set_problem, parent, false);
 
         return new ViewHolder(v);
     }

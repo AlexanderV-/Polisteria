@@ -31,24 +31,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/polisteria_logoname" />
 
-        <EditText
-            android:id="@+id/nameEditText"
-            style="@android:style/Widget.Material.Light.EditText"
-            android:layout_width="261dp"
-            android:layout_height="41dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="44dp"
-            android:backgroundTint="@color/colorAccent"
-            android:ems="10"
-            android:hint="@string/nameEditTex"
-            android:inputType="textPersonName"
-            android:selectAllOnFocus="true"
-            android:singleLine="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline5" />
-
         <android.support.constraint.Guideline
             android:id="@+id/guideline5"
             android:layout_width="wrap_content"
@@ -57,58 +39,55 @@
             app:layout_constraintGuide_begin="260dp" />
 
         <EditText
-            android:id="@+id/emailEditText"
+            android:id="@+id/emailSignUp"
             android:layout_width="262dp"
             android:layout_height="42dp"
             android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:backgroundTint="@color/colorAccent"
             android:ems="10"
             android:hint="@string/pedir_email"
             android:inputType="textEmailAddress"
-            app:layout_constraintBottom_toTopOf="@+id/passwordEditText"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.495"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nameEditText"
-            app:layout_constraintVertical_bias="0.387" />
+            app:layout_constraintBottom_toTopOf="@+id/passwordSignUp"
+            app:layout_constraintEnd_toEndOf="@+id/passwordSignUp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/passwordSignUp"
+            app:layout_constraintTop_toBottomOf="@+id/polisteriaLogoName" />
 
         <EditText
-            android:id="@+id/passwordEditText"
+            android:id="@+id/passwordSignUp"
             android:layout_width="263dp"
             android:layout_height="41dp"
-            android:layout_marginBottom="32dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
             android:backgroundTint="@color/colorAccent"
             android:ems="10"
             android:hint="@string/pedir_password"
             android:inputType="textPassword"
             android:singleLine="false"
-            app:layout_constraintBottom_toTopOf="@+id/button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintBottom_toTopOf="@+id/buttonSignUp"
+            app:layout_constraintEnd_toEndOf="@+id/buttonSignUp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/buttonSignUp"
+            app:layout_constraintTop_toBottomOf="@+id/emailSignUp" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/buttonSignUp"
             style="@android:style/Widget.Material.Button"
             android:layout_width="293dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginBottom="48dp"
             android:background="@color/colorAccentDark"
+            android:elevation="2dp"
             android:text="@string/create_account"
             android:textAllCaps="false"
             android:textColor="@android:color/background_light"
             android:textSize="14sp"
             android:textStyle="bold"
-            android:elevation="2dp"
+            android:onClick="Login"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordSignUp" />
 
     </android.support.constraint.ConstraintLayout>
 

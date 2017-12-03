@@ -10,7 +10,7 @@
 
 
     <EditText
-        android:id="@+id/emailEditText"
+        android:id="@+id/emailSignUp"
         android:layout_width="247dp"
         android:layout_height="46dp"
         android:layout_marginEnd="8dp"
@@ -23,14 +23,14 @@
         android:selectAllOnFocus="true"
         android:singleLine="true"
         android:textColorHint="#FFF"
-        app:layout_constraintBottom_toTopOf="@+id/passwordEditText"
+        app:layout_constraintBottom_toTopOf="@+id/passwordSignUp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/guideline3" />
 
     <EditText
-        android:id="@+id/passwordEditText"
+        android:id="@+id/passwordSignUp"
         android:layout_width="243dp"
         android:layout_height="43dp"
         android:layout_marginBottom="8dp"
@@ -48,7 +48,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/emailSignUp" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline3"

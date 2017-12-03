@@ -19,4 +19,5 @@
     <string name="last_nameEditText">Last Name</string>
     <string name="polisteriaLogoName">polisteriaLogoName</string>
     <string name="create_account">CREATE ACCOUNT</string>
+    <string name="title_activity_set_problem">setProblem</string>
 </resources>
