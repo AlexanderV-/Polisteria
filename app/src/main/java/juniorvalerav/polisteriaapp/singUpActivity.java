@@ -32,7 +32,6 @@ public class singUpActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         mEmailSignUp = findViewById(R.id.emailSignUp);
         mPasswordSignUp = findViewById(R.id.passwordSignUp);
-        Button mButtonSignUp = findViewById(R.id.singUpButton);
 
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override

@@ -39,7 +39,7 @@
             app:layout_constraintGuide_begin="260dp" />
 
         <EditText
-            android:id="@+id/emailEditText"
+            android:id="@+id/emailSignUp"
             android:layout_width="262dp"
             android:layout_height="42dp"
             android:layout_marginBottom="8dp"
@@ -50,13 +50,13 @@
             android:ems="10"
             android:hint="@string/pedir_email"
             android:inputType="textEmailAddress"
-            app:layout_constraintBottom_toTopOf="@+id/passwordEditText"
-            app:layout_constraintEnd_toEndOf="@+id/passwordEditText"
-            app:layout_constraintStart_toStartOf="@+id/passwordEditText"
+            app:layout_constraintBottom_toTopOf="@+id/passwordSignUp"
+            app:layout_constraintEnd_toEndOf="@+id/passwordSignUp"
+            app:layout_constraintStart_toStartOf="@+id/passwordSignUp"
             app:layout_constraintTop_toTopOf="@+id/guideline5" />
 
         <EditText
-            android:id="@+id/passwordEditText"
+            android:id="@+id/passwordSignUp"
             android:layout_width="263dp"
             android:layout_height="41dp"
             android:layout_marginBottom="8dp"
@@ -68,13 +68,13 @@
             android:hint="@string/pedir_password"
             android:inputType="textPassword"
             android:singleLine="false"
-            app:layout_constraintBottom_toTopOf="@+id/button"
-            app:layout_constraintEnd_toEndOf="@+id/button"
-            app:layout_constraintStart_toStartOf="@+id/button"
+            app:layout_constraintBottom_toTopOf="@+id/buttonSignUp"
+            app:layout_constraintEnd_toEndOf="@+id/buttonSignUp"
+            app:layout_constraintStart_toStartOf="@+id/buttonSignUp"
             app:layout_constraintTop_toTopOf="@+id/guideline5" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/buttonSignUp"
             style="@android:style/Widget.Material.Button"
             android:layout_width="293dp"
             android:layout_height="wrap_content"
@@ -87,12 +87,13 @@
             android:textAllCaps="false"
             android:textColor="@android:color/background_light"
             android:textSize="14sp"
+            android:onClick="Login"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/passwordEditText" />
+            app:layout_constraintTop_toBottomOf="@+id/passwordSignUp" />
 
     </android.support.constraint.ConstraintLayout>
 
