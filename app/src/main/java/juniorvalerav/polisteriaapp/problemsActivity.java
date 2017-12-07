@@ -17,6 +17,10 @@ public class problemsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_problems);
 
 
+        mRecyclerView = findViewById(R.id.recyclerViewLayout);
+        mLayoutManager = new LinearLayoutManager(getApplicationContext());
+        mRecyclerView.setLayoutManager(mLayoutManager);
+
 
     }
 }

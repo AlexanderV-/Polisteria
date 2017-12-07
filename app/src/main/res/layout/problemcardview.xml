@@ -1,83 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
 
     android:id="@+id/problemCardView"
-    android:layout_width="348dp"
-    android:layout_height="113dp"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
     android:layout_marginEnd="8dp"
     android:layout_marginStart="8dp"
     app:cardBackgroundColor="@color/cardview_light_background"
     app:cardCornerRadius="4dp"
     app:cardElevation="4dp"
-    app:cardUseCompatPadding="true"
-    >
+    app:cardUseCompatPadding="true">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/deslave"
-            android:scaleType="centerCrop" />
+            android:layout_height="match_parent">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="right"
-            android:orientation="horizontal"
-            android:layout_marginEnd="20dp">
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:background="@drawable/likeupicon"
-                android:backgroundTint="@color/cardview_light_background"
-                android:scaleType="centerCrop" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_gravity="bottom"
-            android:paddingStart="4dp"
-            >
-
-            <TextView
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif"
-                android:text="Deslave en Sta Juana"
-                android:textColor="@color/colorAccent"
-                android:textSize="20sp"
-                android:gravity="center"
-                android:textStyle="bold|italic" />
-
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="157dp" />
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingStart="4dp"
-                >
+                android:id="@+id/linearLayout3"
+                android:layout_width="133dp"
+                android:layout_height="164dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline12"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Se ha venido el cerro y hemos \n quedado sin vivienda "
-                    android:textColor="@color/cardview_light_background"
-                    android:textSize="12sp"
-                    android:textStyle="italic" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageProblem"
+                    android:background="@drawable/deslave"
+                    android:layout_gravity="center"/>
 
             </LinearLayout>
 
-        </LinearLayout>
-    </FrameLayout>
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="156dp"
+                android:layout_height="168dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.466"
+                app:layout_constraintStart_toStartOf="@+id/guideline12"
+                app:layout_constraintTop_toTopOf="parent"
+                android:gravity="center">
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:id="@+id/tituloProblem"
+                    android:hint="Titulo"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Descricion del Problema"
+                    android:textSize="10sp"
+                    android:id="@+id/descripcionProblem"
+
+                    />
+
+                <Button
+                    android:id="@+id/votarProblem"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/rounded_button"
+                    android:drawableEnd="@drawable/likeupicon"
+                    android:text="Votar"
+                    android:textColor="@color/cardview_light_background"/>
+            </LinearLayout>
+
+
+        </android.support.constraint.ConstraintLayout>
+    </FrameLayout>
 </android.support.v7.widget.CardView>
