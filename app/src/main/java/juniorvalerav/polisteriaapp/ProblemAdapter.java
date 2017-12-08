@@ -6,6 +6,7 @@ package juniorvalerav.polisteriaapp;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.media.Image;
 import android.support.v7.widget.RecyclerView;
@@ -16,6 +17,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -26,16 +29,17 @@ public class ProblemAdapter extends RecyclerView.Adapter<ProblemAdapter.ViewHold
 
 
     private List<Problem> Problemas;
-   private static Context activity;
-
+    private static Context activity;
+    private FirebaseDatabase mDatabase;
+    private DatabaseReference myRef;
 
     public void setActivity(Context activity) {
-        this.activity = activity;
+        ProblemAdapter.activity = activity;
     }
 
     public ProblemAdapter(List<Problem> problemas, Context applicationContext) {
         this.Problemas = problemas;
-        this.activity =  applicationContext;
+        activity =  applicationContext;
     }
 
     public List<Problem> getProblemas() {
@@ -72,11 +76,35 @@ public class ProblemAdapter extends RecyclerView.Adapter<ProblemAdapter.ViewHold
     public void onBindViewHolder(ViewHolder holder, int position) {
 
         Problem problema = Problemas.get(position);
-        holder.Titulo.setText(problema.getTitulo());
-        holder.Descripcion.setText(problema.getDescripcion());
+        mDatabase = FirebaseDatabase.getInstance();
+        final String key = problema.getKey();
+        final String titulo = problema.gettitulo();
+        final String descripcion = problema.getdescripcion();
+        final String estado = problema.getEstado();
+        final String estatus = problema.getEstatus();
+
+
+        holder.Titulo.setText(titulo);
+        holder.Descripcion.setText(descripcion);
+
+        holder.imageCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(activity.getApplicationContext(),watchProblems.class);
+                intent.putExtra("key", key);
+                intent.putExtra("titulo", titulo);
+                intent.putExtra("descripcion", descripcion);
+                intent.putExtra("estado", estado);
+                intent.putExtra("estatus", estatus);
+
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                activity.startActivity(intent);
+            }
+        });
 
 
     }
+
 
     @Override
     public int getItemCount() {

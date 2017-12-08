@@ -57,17 +57,19 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/signOutTextView"
                     android:layout_width="52dp"
                     android:layout_height="48dp"
                     android:background="@drawable/logouticon"
-                    android:backgroundTint="@color/colorAccent" />
+                    android:backgroundTint="@color/cardview_light_background" />
 
                 <TextView
+                    android:id="@+id/settingsTextView"
                     android:layout_width="52dp"
                     android:layout_height="48dp"
                     android:layout_gravity="end"
-                    android:background="@drawable/settingicon"
-                    android:backgroundTint="@color/colorAccent" />
+                    android:background="@drawable/addicon"
+                    android:backgroundTint="@color/cardview_light_background" />
             </LinearLayout>
 
 
@@ -81,6 +83,7 @@
                 android:paddingLeft="16dp">
 
                 <TextView
+                    android:id="@+id/usernameTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif"
@@ -94,6 +97,7 @@
                     android:layout_height="wrap_content">
 
                     <TextView
+                        android:id="@+id/stateUserTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Merida"
@@ -107,6 +111,7 @@
                     android:layout_height="wrap_content">
 
                     <TextView
+                        android:id="@+id/extraUserTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Alcade"

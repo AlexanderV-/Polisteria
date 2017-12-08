@@ -48,38 +48,38 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/imageProblem"
-                    android:background="@drawable/deslave"
                     android:layout_gravity="center"/>
 
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout2"
-                android:layout_width="156dp"
-                android:layout_height="168dp"
+                android:layout_width="150dp"
+                android:layout_height="173dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.466"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline12"
                 app:layout_constraintTop_toTopOf="parent"
-                android:gravity="center">
+                app:layout_constraintVertical_bias="0.0">
 
                 <TextView
+                    android:id="@+id/tituloProblem"
                     android:layout_width="match_parent"
                     android:layout_height="20dp"
-                    android:id="@+id/tituloProblem"
-                    android:hint="Titulo"/>
+                    android:hint="Titulo" />
 
                 <TextView
+                    android:id="@+id/descripcionProblem"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:hint="Descricion del Problema"
                     android:textSize="10sp"
-                    android:id="@+id/descripcionProblem"
 
                     />
 
@@ -87,10 +87,10 @@
                     android:id="@+id/votarProblem"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:background="@drawable/rounded_button"
+                    android:background="@color/colorAccentDark"
                     android:drawableEnd="@drawable/likeupicon"
                     android:text="Votar"
-                    android:textColor="@color/cardview_light_background"/>
+                    android:textColor="@color/cardview_light_background" />
             </LinearLayout>
 
 

@@ -63,7 +63,7 @@ public class loginActivity extends AppCompatActivity {
 
 
     public void Main(){
-        Intent intent = new Intent(getApplicationContext(),setProblemActivity.class);
+        Intent intent = new Intent(getApplicationContext(),problemsActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }

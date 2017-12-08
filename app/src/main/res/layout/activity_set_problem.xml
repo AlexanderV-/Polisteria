@@ -66,27 +66,13 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/rounded_button"
-        android:text="CANCELAR"
+        android:text="@string/cancelar"
+        android:onClick="Cancel"
         android:textColor="@color/cardview_light_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toTopOf="@+id/guideline6" />
-
-    <Button
-        android:id="@+id/imageButton"
-        android:layout_width="338dp"
-        android:layout_height="36dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:background="@color/cardview_light_background"
-        android:text="@string/subir_imagen"
-        android:onClick="SubirImagen"
-        android:textColor="@color/colorAccentDark"
-        app:layout_constraintBottom_toTopOf="@+id/guideline6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearlayout"
@@ -138,6 +124,21 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Calle" />
+
+        <Button
+            android:id="@+id/imageButton"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/cardview_light_background"
+            android:onClick="SubirImagen"
+            android:text="@string/subir_imagen"
+            android:textColor="@color/colorAccentDark"
+            app:layout_constraintBottom_toTopOf="@+id/guideline6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
 
     </LinearLayout>

@@ -8,7 +8,7 @@
     tools:context="juniorvalerav.polisteriaapp.watchProblems">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imagenProblemaTextView"
         android:layout_width="162dp"
         android:layout_height="107dp"
         android:layout_marginEnd="8dp"
@@ -34,11 +34,11 @@
         android:text="Voluntario"
         android:textColor="@color/cardview_light_background"
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView12"
+        app:layout_constraintBottom_toTopOf="@+id/descripcionTextView"
         app:layout_constraintEnd_toStartOf="@+id/guideline11"
         app:layout_constraintHorizontal_bias="0.326"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imagenProblemaTextView" />
 
     <Button
         android:id="@+id/button8"
@@ -54,32 +54,31 @@
         android:text="Donador"
         android:textColor="@color/cardview_light_background"
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView12"
+        app:layout_constraintBottom_toTopOf="@+id/descripcionTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.695"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imagenProblemaTextView" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/estatusTextView"
         android:layout_width="156dp"
         android:layout_height="36dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/rounded_button"
-        android:text="Estatus: \n Trabajando"
         android:textAlignment="center"
         android:textColor="@color/cardview_light_background"
         app:layout_constraintBottom_toTopOf="@+id/guideline10"
         app:layout_constraintEnd_toStartOf="@+id/guideline11"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="@+id/presupuestoTextView"
+        app:layout_constraintTop_toBottomOf="@+id/presupuestoTextView"
         app:layout_constraintVertical_bias="0.3" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/presupuestoTextView"
         android:layout_width="156dp"
         android:layout_height="36dp"
         android:layout_marginEnd="8dp"
@@ -89,41 +88,40 @@
         android:text="Presupuesto: 200000000 Bs"
         android:textAlignment="center"
         android:textColor="@color/cardview_light_background"
-        app:layout_constraintEnd_toStartOf="@+id/textView10"
+        app:layout_constraintEnd_toStartOf="@+id/departamentoTextView"
         app:layout_constraintHorizontal_bias="0.833"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintTop_toBottomOf="@+id/descripcionTextView" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/supervisorTextView"
         android:layout_width="156dp"
         android:layout_height="36dp"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/rounded_button"
-        android:text="Supervisor: \n Julio Moreno"
         android:textAlignment="center"
         android:textColor="@color/cardview_light_background"
         app:layout_constraintBottom_toTopOf="@+id/guideline10"
-        app:layout_constraintEnd_toEndOf="@+id/textView12"
+        app:layout_constraintEnd_toEndOf="@+id/descripcionTextView"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintTop_toBottomOf="@+id/departamentoTextView" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/departamentoTextView"
         android:layout_width="156dp"
         android:layout_height="36dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/rounded_button"
-        android:text="Obras: \n Departamento"
+        android:text="Departamento: \n Obras"
         android:textAlignment="center"
         android:textColor="@color/cardview_light_background"
-        app:layout_constraintEnd_toEndOf="@+id/textView12"
+        app:layout_constraintEnd_toEndOf="@+id/descripcionTextView"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintTop_toBottomOf="@+id/descripcionTextView" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline10"
@@ -133,7 +131,7 @@
         app:layout_constraintGuide_begin="402dp" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/tituloTextView"
         android:layout_width="341dp"
         android:layout_height="47dp"
         android:layout_marginBottom="8dp"
@@ -141,11 +139,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/baloo_bhai"
-        android:text="Deslave en Sta Juana"
         android:textAlignment="center"
         android:textColor="@color/colorAccentDark"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/imagenProblemaTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -158,7 +155,7 @@
         app:layout_constraintGuide_begin="192dp" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/descripcionTextView"
         android:layout_width="327dp"
         android:layout_height="54dp"
         android:layout_marginEnd="8dp"
@@ -166,12 +163,11 @@
         android:layout_marginTop="48dp"
         android:background="@color/cardview_light_background"
         android:shadowColor="@color/colorAccent"
-        android:text="Varias casas han sido derribadas por lluvia intensa, necesitamos ayuda alcalde!!!"
         android:textAlignment="viewStart"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imagenProblemaTextView" />
 
     <ListView
         android:id="@+id/comentariosListView"
@@ -195,7 +191,7 @@
         app:layout_constraintBottom_toTopOf="@+id/comentariosListView"
         app:layout_constraintEnd_toStartOf="@+id/guideline11"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView14"
+        app:layout_constraintStart_toStartOf="@+id/estatusTextView"
         app:layout_constraintTop_toBottomOf="@+id/textView8"
         app:layout_constraintVertical_bias="0.97" />
 

@@ -1,5 +1,6 @@
 package juniorvalerav.polisteriaapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -7,10 +8,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -19,15 +22,20 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class setProblemActivity extends AppCompatActivity {
     private Problem mProblema;
-    private Usuario mUser;
+
+    //Atributos Problemas
+    private Spinner mSpinner;
     private EditText mTitulo;
     private EditText mDescripcion;
+    private EditText mAvenida;
+    private EditText mCalle;
     private Button mSubirButton;
-    private Button mCancelButton;
     private Button mSubirImageButton;
+    //Firebase
     private FirebaseDatabase mDatabase;
     private DatabaseReference myRef;
     private FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,22 +54,32 @@ public class setProblemActivity extends AppCompatActivity {
 
         String titulo = mTitulo.getText().toString();
         String descripcion = mDescripcion.getText().toString();
-        FirebaseUser user = mAuth.getCurrentUser();
+        String avenida = mAvenida.getText().toString();
+        String calle = mCalle.getText().toString();
+        String estado = mSpinner.getSelectedItem().toString();
 
+
+        FirebaseUser user = mAuth.getCurrentUser();
         assert user != null;
         String uid = user.getUid();
-        mProblema = new Problem(titulo,descripcion,"downloadURL",2, uid);
+
 
 
         if(!TextUtils.isEmpty(titulo) && !TextUtils.isEmpty(descripcion)){
             DatabaseReference nuevoProblema = myRef.push();
+            String key = myRef.push().getKey();
+            mProblema = new Problem(titulo,descripcion,"downloadURL","Esperando", avenida,calle,estado,
+                    2,uid,key);
             nuevoProblema.setValue(mProblema);
 
+            Intent intent = new Intent(getApplicationContext(),problemsActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
+
+        }else{
+            Toast.makeText(this, "Error al ingresar datos, verifique.", Toast.LENGTH_SHORT).show();
         }
-
-
-
-
 
     }
 
@@ -69,26 +87,29 @@ public class setProblemActivity extends AppCompatActivity {
     public  void BindUI(){
 
         mTitulo = findViewById(R.id.tituloEditText);
+        mAvenida= findViewById(R.id.avenidaEditText);
+        mCalle = findViewById(R.id.calleEditText);
         mDescripcion = findViewById(R.id.descripcionEditText);
         mSubirButton = findViewById(R.id.uploadButton);
-        mCancelButton = findViewById(R.id.cancelButton);
         mSubirImageButton = findViewById(R.id.imageButton);
+        mSpinner = findViewById(R.id.spinner);
 
     }
 
     public void setSpinner(){
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
-// Create an ArrayAdapter using the string array and a default spinner layout
+         mSpinner = findViewById(R.id.spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.estados_array, android.R.layout.simple_spinner_item);
-// Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-// Apply the adapter to the spinner
-        spinner.setAdapter(adapter);
 
+        mSpinner.setAdapter(adapter);
     }
 
-    public void Llenar(){
 
+    public void Cancel(View view) {
+        Intent intent = new Intent(getApplicationContext(),watchProblems.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        finish();
     }
 }
