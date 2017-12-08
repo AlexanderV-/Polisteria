@@ -52,7 +52,10 @@ public class ProblemAdapter extends RecyclerView.Adapter<ProblemAdapter.ViewHold
             Titulo = itemView.findViewById(R.id.tituloProblem);
             Descripcion = itemView.findViewById(R.id.descripcionProblem);
             imageCard = itemView.findViewById(R.id.imageProblem);
-            Picasso.with(activity.getApplicationContext()).load("http://i.imgur.com/DvpvklR.png").into(imageCard);
+            Picasso.with(activity.getApplicationContext())
+                    .load("http://i.imgur.com/DvpvklR.png")
+                    .fit()
+                    .into(imageCard);
         }
     }
 

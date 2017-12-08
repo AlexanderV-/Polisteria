@@ -9,8 +9,30 @@ public class Problem {
     private String Descripcion;
     private String UrlImage;
     private int Voto= 0;
+    private String uid;
 
-    
+    public String getUid() {
+        return uid;
+    }
+
+    public Problem(String titulo, String descripcion, String urlImage, int voto) {
+        Titulo = titulo;
+        Descripcion = descripcion;
+        UrlImage = urlImage;
+        Voto = voto;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
+
+    public Problem(String titulo, String descripcion, String urlImage, int voto, String uid) {
+        Titulo = titulo;
+        Descripcion = descripcion;
+        UrlImage = urlImage;
+        Voto = voto;
+        this.uid = uid;
+    }
 
     public Problem(){}
 
@@ -46,10 +68,4 @@ public class Problem {
         Voto = voto;
     }
 
-    public Problem(String titulo, String descripcion, String urlImage, int voto) {
-        Titulo = titulo;
-        Descripcion = descripcion;
-        UrlImage = urlImage;
-        Voto = voto;
-    }
 }

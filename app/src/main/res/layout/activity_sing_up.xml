@@ -39,7 +39,7 @@
             app:layout_constraintGuide_begin="260dp" />
 
         <EditText
-            android:id="@+id/emailSignUp"
+            android:id="@+id/emailSignIn"
             android:layout_width="262dp"
             android:layout_height="42dp"
             android:layout_marginBottom="8dp"
@@ -50,13 +50,13 @@
             android:ems="10"
             android:hint="@string/pedir_email"
             android:inputType="textEmailAddress"
-            app:layout_constraintBottom_toTopOf="@+id/passwordSignUp"
-            app:layout_constraintEnd_toEndOf="@+id/passwordSignUp"
-            app:layout_constraintStart_toStartOf="@+id/passwordSignUp"
+            app:layout_constraintBottom_toTopOf="@+id/passwordSignIn"
+            app:layout_constraintEnd_toEndOf="@+id/passwordSignIn"
+            app:layout_constraintStart_toStartOf="@+id/passwordSignIn"
             app:layout_constraintTop_toTopOf="@+id/guideline5" />
 
         <EditText
-            android:id="@+id/passwordSignUp"
+            android:id="@+id/passwordSignIn"
             android:layout_width="263dp"
             android:layout_height="41dp"
             android:layout_marginBottom="8dp"
@@ -93,7 +93,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/passwordSignUp" />
+            app:layout_constraintTop_toBottomOf="@+id/passwordSignIn" />
 
     </android.support.constraint.ConstraintLayout>
 

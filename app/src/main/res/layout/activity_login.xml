@@ -10,7 +10,7 @@
 
 
     <EditText
-        android:id="@+id/emailSignUp"
+        android:id="@+id/emailSignIn"
         android:layout_width="247dp"
         android:layout_height="46dp"
         android:layout_marginEnd="8dp"
@@ -19,18 +19,19 @@
         android:backgroundTint="@android:color/background_light"
         android:ems="10"
         android:hint="@string/pedir_email"
+        android:textColor="@color/cardview_light_background"
         android:inputType="textEmailAddress"
         android:selectAllOnFocus="true"
         android:singleLine="true"
         android:textColorHint="#FFF"
-        app:layout_constraintBottom_toTopOf="@+id/passwordSignUp"
+        app:layout_constraintBottom_toTopOf="@+id/passwordSignIn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/guideline3" />
 
     <EditText
-        android:id="@+id/passwordSignUp"
+        android:id="@+id/passwordSignIn"
         android:layout_width="243dp"
         android:layout_height="43dp"
         android:layout_marginBottom="8dp"
@@ -38,6 +39,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="@android:color/background_light"
+        android:textColor="@color/cardview_light_background"
         android:ems="10"
         android:hint="@string/pedir_password"
         android:inputType="textPassword"
@@ -48,7 +50,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailSignUp" />
+        app:layout_constraintTop_toBottomOf="@+id/emailSignIn" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline3"
@@ -95,6 +97,7 @@
         android:layout_marginTop="8dp"
         android:background="@color/colorAccentDark"
         android:text="@string/sign_in_botton"
+        android:onClick="Login"
         android:textColor="@android:color/background_light"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
