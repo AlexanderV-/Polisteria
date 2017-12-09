@@ -21,7 +21,7 @@
     </ImageView>
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/voluntarioButton"
         android:layout_width="114dp"
         android:layout_height="25dp"
         android:layout_marginBottom="8dp"
@@ -32,6 +32,7 @@
         android:drawableStart="@drawable/voluntarioicon"
         android:drawableTint="@color/cardview_light_background"
         android:text="Voluntario"
+        android:onClick="Voluntario"
         android:textColor="@color/cardview_light_background"
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/descripcionTextView"
@@ -69,6 +70,7 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/rounded_button"
         android:textAlignment="center"
+        android:gravity="center"
         android:textColor="@color/cardview_light_background"
         app:layout_constraintBottom_toTopOf="@+id/guideline10"
         app:layout_constraintEnd_toStartOf="@+id/guideline11"
@@ -102,6 +104,7 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/rounded_button"
         android:textAlignment="center"
+        android:gravity="center"
         android:textColor="@color/cardview_light_background"
         app:layout_constraintBottom_toTopOf="@+id/guideline10"
         app:layout_constraintEnd_toEndOf="@+id/descripcionTextView"
@@ -220,6 +223,7 @@
         android:background="@drawable/rounded_button"
         android:text="Comentar"
         android:textAlignment="center"
+        android:gravity="center"
         android:textColor="@color/cardview_light_background"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -10,24 +10,10 @@
     tools:layout_editor_absoluteY="25dp">
 
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerViewLayout"
-        android:layout_width="342dp"
-        android:layout_height="391dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView">
-
-    </android.support.v7.widget.RecyclerView>
-
     <android.support.v7.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="348dp"
-        android:layout_height="113dp"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         app:cardBackgroundColor="@color/cardview_light_background"
@@ -80,47 +66,50 @@
                 android:background="#53292929"
                 android:orientation="vertical"
                 android:paddingBottom="16dp"
-                android:paddingLeft="16dp">
+                android:paddingLeft="16dp"
+                android:gravity="center_vertical">
 
                 <TextView
                     android:id="@+id/usernameTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif"
-                    android:text="Junior Valera"
                     android:textColor="@color/cardview_light_background"
                     android:textSize="20sp" />
 
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
+                <TextView
                         android:id="@+id/stateUserTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Merida"
                         android:textColor="@color/cardview_light_background"
                         android:textSize="20sp" />
 
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
 
                     <TextView
                         android:id="@+id/extraUserTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Alcade"
                         android:textAllCaps="false"
                         android:textColor="@color/cardview_light_background"
                         android:textSize="20sp" />
-
-                </LinearLayout>
             </LinearLayout>
         </FrameLayout>
     </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewLayout"
+        android:layout_width="318dp"
+        android:layout_height="394dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:clipToPadding="true"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+    </android.support.v7.widget.RecyclerView>
 </android.support.constraint.ConstraintLayout>

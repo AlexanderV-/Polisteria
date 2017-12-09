@@ -1,8 +1,10 @@
 package juniorvalerav.polisteriaapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -42,7 +44,7 @@ public class watchProblems extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_watch_problems);
         mDatabase = FirebaseDatabase.getInstance();
-        myRef = mDatabase.getReference().child("Problemas");
+        myRef = mDatabase.getReference();
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
 
@@ -59,11 +61,34 @@ public class watchProblems extends AppCompatActivity {
         mEstado = findViewById(R.id.supervisorTextView);
 
 
-        mTitulo.setText(titulo);
+       /* mTitulo.setText(titulo);
         mDescripcion.setText(descripcion);
         mEstado.setText(estado);
-        mEstatus.setText(estatus);
-        Toast.makeText(this, "Key "+ key, Toast.LENGTH_SHORT).show();
+        mEstatus.setText(estatus);*/
+
+       Query query = myRef.child("Problemas").orderByChild("key").equalTo(key);
+       //Toast.makeText(this, "Key "+ key, Toast.LENGTH_SHORT).show();
+
+       query.addListenerForSingleValueEvent(new ValueEventListener() {
+           @Override
+           public void onDataChange(DataSnapshot dataSnapshot) {
+               Problem problema = null;
+               for (DataSnapshot child : dataSnapshot.getChildren()) {
+                   problema = child.getValue(Problem.class);
+                   mTitulo.setText(problema.gettitulo());
+                   mDescripcion.setText(problema.getdescripcion());
+                   mEstatus.setText(problema.getEstatus());
+                   mEstado.setText(problema.getEstado());
+                   Toast.makeText(watchProblems.this, "Titulo" + problema.gettitulo(), Toast.LENGTH_SHORT).show();
+               }
+
+           }
+
+           @Override
+           public void onCancelled(DatabaseError databaseError) {
+
+           }
+       });
 
 
 
@@ -86,6 +111,11 @@ public class watchProblems extends AppCompatActivity {
         }
 
 
-
+    public void Voluntario(View view) {
+        Intent intent = new Intent(getApplicationContext(),problemsActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        finish();
     }
+}
 

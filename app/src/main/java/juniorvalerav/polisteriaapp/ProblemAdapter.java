@@ -78,25 +78,14 @@ public class ProblemAdapter extends RecyclerView.Adapter<ProblemAdapter.ViewHold
         Problem problema = Problemas.get(position);
         mDatabase = FirebaseDatabase.getInstance();
         final String key = problema.getKey();
-        final String titulo = problema.gettitulo();
-        final String descripcion = problema.getdescripcion();
-        final String estado = problema.getEstado();
-        final String estatus = problema.getEstatus();
-
-
-        holder.Titulo.setText(titulo);
-        holder.Descripcion.setText(descripcion);
+        holder.Titulo.setText(problema.gettitulo());
+        holder.Descripcion.setText(problema.getdescripcion());
 
         holder.imageCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(activity.getApplicationContext(),watchProblems.class);
                 intent.putExtra("key", key);
-                intent.putExtra("titulo", titulo);
-                intent.putExtra("descripcion", descripcion);
-                intent.putExtra("estado", estado);
-                intent.putExtra("estatus", estatus);
-
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 activity.startActivity(intent);
             }

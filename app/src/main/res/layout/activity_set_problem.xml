@@ -28,13 +28,6 @@
         app:layout_constraintVertical_bias="0.756" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="481dp" />
-
-    <android.support.constraint.Guideline
         android:id="@+id/guideline8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -51,11 +44,12 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/rounded_button"
         android:text="SUBIR"
+        android:onClick="SubirProblema"
         android:textColor="@color/cardview_light_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline6" />
+        app:layout_constraintTop_toBottomOf="@+id/linearlayout" />
 
     <Button
         android:id="@+id/cancelButton"
@@ -63,38 +57,41 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/rounded_button"
-        android:text="@string/cancelar"
         android:onClick="Cancel"
+        android:text="@string/cancelar"
         android:textColor="@color/cardview_light_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toTopOf="@+id/guideline6" />
+        app:layout_constraintTop_toBottomOf="@+id/linearlayout" />
 
     <LinearLayout
         android:id="@+id/linearlayout"
-        android:layout_width="389dp"
-        android:layout_height="545dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.153"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <EditText
             android:id="@+id/tituloEditText"
             android:layout_width="324dp"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="Titulo"
             android:inputType="textPersonName"
-            android:paddingRight="20dp"
-            android:text="Titulo" />
+            android:paddingRight="20dp" />
 
         <EditText
             android:id="@+id/descripcionEditText"
@@ -114,16 +111,16 @@
             android:layout_width="326dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Avenida" />
+            android:hint="Avenida"
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/calleEditText"
             android:layout_width="327dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Calle" />
+            android:hint="Calle"
+            android:inputType="textPersonName" />
 
         <Button
             android:id="@+id/imageButton"
